@@ -41,15 +41,12 @@ def main():
     
     user_name = "uname"
     password = "pwd"
-#     driver = webdriver.Chrome('usr/bin/chromedriver')
     driver.get("https://www.facebook.com")
-#     driver.manage().window().maximize()
     element = driver.find_element_by_id("email")
     element.send_keys(user_name)
     element = driver.find_element_by_id("pass")
     element.send_keys(password)
     element.send_keys(Keys.RETURN)
-    element.close()
 
 if __name__ == "__main__":
     main()
