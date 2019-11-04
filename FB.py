@@ -39,14 +39,15 @@ def main():
     options = build_chrome_options()
     driver = webdriver.Chrome('usr/bin/chromedriver',options=options)
     
-    user_name = "uname"
-    password = "pwd"
+    user_name = "farhaan143341@gmail.com"
+    password = "143iminlove341"
     driver.get("https://www.facebook.com")
     element = driver.find_element_by_id("email")
     element.send_keys(user_name)
     element = driver.find_element_by_id("pass")
     element.send_keys(password)
     element.send_keys(Keys.RETURN)
+    element.close()
 
 if __name__ == "__main__":
     main()
